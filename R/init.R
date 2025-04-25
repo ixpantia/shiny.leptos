@@ -134,6 +134,57 @@ init <- function(path = ".") {
     cli::cli_process_done()
   }
 
+  # Add target/, out/, srcts/node_modules/ to .gitignore
+  git_ignore_path <- file.path(path, ".gitignore")
+  if (!file.exists(git_ignore_path)) {
+    cli::cli_process_start(
+      "Creating .gitignore file",
+      msg_done = "Created .gitignore file",
+      msg_failed = "Failed to create .gitignore file"
+    )
+    tryCatch(
+      {
+        writeLines(
+          c("target/", "out/", "srcts/node_modules/"),
+          git_ignore_path
+        )
+        cli::cli_process_done()
+      },
+      error = function(e) {
+        cli::cli_process_failed(msg = glue::glue("Error: {e$message}"))
+      }
+    )
+  } else {
+    cli::cli_process_start(
+      ".gitignore file already exists",
+      msg_done = "Checked .gitignore file",
+      msg_failed = "Failed to check .gitignore file"
+    )
+    tryCatch(
+      {
+        # Read the existing .gitignore file
+        git_ignore_content <- readLines(git_ignore_path, warn = FALSE)
+        # Check if the lines are already present
+        lines_to_add <- c(
+          "target/",
+          "out/",
+          "srcts/node_modules/"
+        )
+        if (!all(lines_to_add %in% git_ignore_content)) {
+          # Append the lines to the file
+          writeLines(c(git_ignore_content, lines_to_add), git_ignore_path)
+          cli::cli_alert_info("Added lines to .gitignore")
+        } else {
+          cli::cli_alert_info("Lines already present in .gitignore")
+        }
+      },
+      error = function(e) {
+        cli::cli_process_failed(msg = glue::glue("Error: {e$message}"))
+      }
+    )
+    cli::cli_process_done()
+  }
+
   # Extract package name from path/DESCRIPTION
   package_name <- tryCatch(
     {
