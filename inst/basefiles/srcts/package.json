@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "@@package_name@@",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@@package_name@@-wasm": "../out/@@package_name@@-wasm"
+  },
+  "devDependencies": {
+    "@types/rstudio-shiny": "https://github.com/rstudio/shiny#v1.10.0",
+    "typescript": "^5.8.3",
+    "vite": "^5.4.18",
+    "vite-plugin-top-level-await": "^1.5.0",
+    "vite-plugin-wasm": "^3.4.1"
+  }
+}

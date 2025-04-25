@@ -1,0 +1,33 @@
+Package: shiny.leptos
+Title: Build Custom Shiny Inputs with Rust, Leptos, and WebAssembly
+Version: 0.1.0.9000
+Authors@R: c(
+    person("ixpantia, SRL", role = "cph", email = "hola@ixpantia.com"),
+    person("Andres", "Quintero", role = c("aut", "cre"), email = "andres@ixpantia.com"),
+    person("The authors of the dependency Rust crates", role = "ctb",
+           comment = "see inst/AUTHORS file for details")
+  )
+Description: Provides tooling and infrastructure to create custom Shiny input
+    components using the Leptos Rust framework. Components are compiled to
+    WebAssembly (WASM) for performance. Includes functions to initialize
+    package structure, scaffold new components, and build the necessary
+    Rust, TypeScript, and Sass assets.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    cli,
+    glue,
+    htmltools,
+    processx,
+    shiny,
+    snakecase,
+    utils,
+    withr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+NeedsCompilation: no
+URL: https://github.com/your-github-username/shiny.leptos # TODO: Add actual URL
+BugReports: https://github.com/your-github-username/shiny.leptos/issues # TODO: Add actual URL
