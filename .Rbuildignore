@@ -2,3 +2,4 @@ target/
 out/
 node_modules/
 ^LICENSE\.md$
+^\.github$

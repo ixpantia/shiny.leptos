@@ -3,6 +3,7 @@
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- TODO: Add CI build status badge -->
+[![R-CMD-check](https://github.com/ixpantia/shiny.leptos/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ixpantia/shiny.leptos/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 **Create Custom Shiny Inputs with Rust, Leptos, and WebAssembly**
