@@ -1,4 +1,6 @@
-# File: R/init.R
+#' @title Get the name of the package from DESCRIPTION
+#' @param path Path to the package directory. Default is the current working directory.
+#' @return The name of the package as a string.
 #' @importFrom cli cli_process_start cli_process_done cli_process_failed cli_alert_success cli_alert_danger cli_alert_info cli_h1 symbol
 #' @importFrom glue glue
 #' @export

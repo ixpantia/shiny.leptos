@@ -19,15 +19,12 @@ RoxygenNote: 7.3.2
 Imports: 
     cli,
     glue,
-    htmltools,
     processx,
-    shiny,
     snakecase,
-    utils,
     withr
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 NeedsCompilation: no
-URL: https://github.com/your-github-username/shiny.leptos # TODO: Add actual URL
-BugReports: https://github.com/your-github-username/shiny.leptos/issues # TODO: Add actual URL
+URL: https://github.com/ixpantia/shiny.leptos
+BugReports: https://github.com/ixpantia/shiny.leptos/issues
