@@ -11,7 +11,7 @@ interface HTMLElement {
 }
 
 // Define a Shiny Output Binding for our component.
-class @@component_name_camel@@Binding extends Shiny.OutputBinding {
+class @@component_name_camel@@Binding extends window.Shiny.OutputBinding {
 
   // Find the HTML element(s) associated with this output binding.
   // The selector should match the class applied in the R UI function.
@@ -48,4 +48,4 @@ class @@component_name_camel@@Binding extends Shiny.OutputBinding {
   clearError(el: HTMLElement): void {}
 }
 
-Shiny.outputBindings.register(new @@component_name_camel@@Binding(), "@@component_name_camel@@Binding");
+window.Shiny.outputBindings.register(new @@component_name_camel@@Binding(), "@@component_name_camel@@Binding");

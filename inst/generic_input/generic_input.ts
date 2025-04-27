@@ -3,17 +3,16 @@ import {
   attach_@@component_name_snake@@,
   update_@@component_name_snake@@,
   get_@@component_name_snake@@_value,
+  @@component_name_camel@@State,
   subscribe_@@component_name_snake@@
 } from "@@package_name@@-wasm";
 
-declare global {
-  interface HTMLElement {
-      state: any;
-  }
+interface HTMLElement {
+    state: @@component_name_camel@@State | undefined;
 }
 
 // Button:
-class @@component_name_camel@@Binding extends Shiny.InputBinding {
+class @@component_name_camel@@Binding extends window.Shiny.InputBinding {
 
   find(scope: HTMLElement): JQuery<HTMLElement> {
     return $(scope).find(".@@package_name@@-@@component_name_snake@@-container");
@@ -60,4 +59,4 @@ class @@component_name_camel@@Binding extends Shiny.InputBinding {
   }
 }
 
-Shiny.inputBindings.register(new @@component_name_camel@@Binding(), "@@component_name_camel@@Binding");
+window.Shiny.inputBindings.register(new @@component_name_camel@@Binding(), "@@component_name_camel@@Binding");
