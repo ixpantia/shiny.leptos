@@ -116,9 +116,6 @@ shinyApp(ui, server)
 *   `new_input_component(component_name)`: Creates scaffolding for a new **input** component.
 *   `new_output_component(component_name)`: Creates scaffolding for a new **output** component.
 *   `build()`: Runs the full build process (Sass, Rust/WASM, TypeScript/Vite).
-*   `build_sass()`: Builds only the Sass assets.
-*   `build_rs()`: Builds only the Rust/WASM assets.
-*   `build_ts()`: Builds only the TypeScript assets (implicitly runs `build_rs`).
 
 ## Project Structure
 
