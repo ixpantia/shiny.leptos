@@ -5,7 +5,7 @@ import {
   get_@@component_name_snake@@_value,
   @@component_name_camel@@State,
   subscribe_@@component_name_snake@@
-} from "@@package_name@@-wasm";
+} from "@@package_name_snake@@-wasm";
 
 interface HTMLElement {
     state: @@component_name_camel@@State | undefined;

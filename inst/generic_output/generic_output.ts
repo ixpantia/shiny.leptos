@@ -3,7 +3,7 @@ import {
   attach_@@component_name_snake@@,
   update_@@component_name_snake@@,
   @@component_name_camel@@State,
-} from "@@package_name@@-wasm"; // Import functions from the WASM package
+} from "@@package_name_snake@@-wasm"; // Import functions from the WASM package
 
 // Extend the HTMLElement interface to include our state property
 interface HTMLElement {

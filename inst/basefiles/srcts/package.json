@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@@package_name@@-wasm": "../out/@@package_name@@-wasm"
+    "@@package_name_snake@@-wasm": "../out/@@package_name@@-wasm"
   },
   "devDependencies": {
     "@types/rstudio-shiny": "https://github.com/rstudio/shiny#v1.10.0",

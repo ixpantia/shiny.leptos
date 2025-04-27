@@ -38,6 +38,8 @@ apply_name <- function(string, package_name, pattern = "@@package_name@@") {
 #' @importFrom cli cli_process_start cli_process_done cli_process_failed cli_alert_success cli_alert_danger cli_alert_info cli_h1 symbol
 #' @importFrom glue glue
 copy_and_apply_package_name <- function(path_from, path_to, package_name) {
+  package_name_snake <- snakecase::to_snake_case(package_name)
+
   cli::cli_process_start(
     "Copying template file from {basename(path_from)} to {path_to}",
     msg_done = "Copied template file to {path_to}",
@@ -53,6 +55,7 @@ copy_and_apply_package_name <- function(path_from, path_to, package_name) {
       file_content <- readLines(path_from, warn = FALSE)
       # Apply the package name
       new_content <- apply_name(file_content, package_name)
+      new_content <- apply_name(new_content, package_name_snake, pattern = "@@package_name_snake@@")
       # Ensure the target directory exists
       target_dir <- dirname(path_to)
       if (!dir.exists(target_dir)) {

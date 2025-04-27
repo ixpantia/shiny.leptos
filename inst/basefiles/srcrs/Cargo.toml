@@ -1,5 +1,5 @@
 [package]
-name = "@@package_name@@-wasm"
+name = "@@package_name_snake@@-wasm"
 version = "0.1.0"
 edition = "2021"
 
