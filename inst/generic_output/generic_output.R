@@ -55,7 +55,7 @@ render_@@component_name_snake@@ <- function(expr, env = parent.frame(), quoted =
     # The CSS class should match the one used in the TypeScript binding's `find` method.
     shiny::div(
       id = outputId,
-      class = "@@package_name@@-@@component_name_snake@@-container",
+      class = "@@package_name_snake@@-@@component_name_snake@@-container",
       style = sprintf(
         "width: %s; height: %s;",
         shiny::validateCssUnit(width),

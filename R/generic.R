@@ -14,6 +14,8 @@ copy_generic <- function(component_name, path = ".", r_file, rs_file, ts_file) {
 
   if (is.null(package_name)) return(invisible(NULL))
 
+  package_name_snake <- snakecase::to_snake_case(package_name)
+
   cli::cli_h1(
     "Creating new component '{component_name_snake}' in package '{package_name}'"
   )
@@ -49,6 +51,11 @@ copy_generic <- function(component_name, path = ".", r_file, rs_file, ts_file) {
         generic_ts,
         component_name_snake,
         "@@component_name_snake@@"
+      )
+      generic_ts <- apply_name(
+        generic_ts,
+        package_name_snake,
+        "@@package_name_snake@@"
       )
       writeLines(generic_ts, generic_ts_path_out)
       cli::cli_process_done()
@@ -214,6 +221,11 @@ copy_generic <- function(component_name, path = ".", r_file, rs_file, ts_file) {
         generic_r,
         component_name_snake,
         "@@component_name_snake@@"
+      )
+      generic_r <- apply_name(
+        generic_r,
+        package_name_snake,
+        "@@package_name_snake@@"
       )
       writeLines(generic_r, generic_r_path_out)
       cli::cli_process_done()

@@ -16,7 +16,7 @@ class @@component_name_camel@@Binding extends window.Shiny.OutputBinding {
   // Find the HTML element(s) associated with this output binding.
   // The selector should match the class applied in the R UI function.
   find(scope: HTMLElement): JQuery<HTMLElement> {
-    return $(scope).find(".@@package_name@@-@@component_name_snake@@-container");
+    return $(scope).find(".@@package_name_snake@@-@@component_name_snake@@-container");
   }
 
   // Get the ID of the output element. Standard implementation.

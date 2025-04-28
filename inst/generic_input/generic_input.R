@@ -3,7 +3,7 @@
   attach_pkg_deps(
     shiny::div(
       id = inputId,
-      class = "@@package_name@@-@@component_name_snake@@-container",
+      class = "@@package_name_snake@@-@@component_name_snake@@-container",
       `data-initial-value` = value
     )
   )

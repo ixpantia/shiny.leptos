@@ -15,7 +15,7 @@ interface HTMLElement {
 class @@component_name_camel@@Binding extends window.Shiny.InputBinding {
 
   find(scope: HTMLElement): JQuery<HTMLElement> {
-    return $(scope).find(".@@package_name@@-@@component_name_snake@@-container");
+    return $(scope).find(".@@package_name_snake@@-@@component_name_snake@@-container");
   }
 
   initialize(el: HTMLElement): void {
